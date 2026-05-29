@@ -1,0 +1,68 @@
+name: Bug Report
+description: Report a defect
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill this out completely. Required fields are marked — you can't submit without them.
+        Be specific about how to reproduce and the expected vs. actual behaviour.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: >
+        A clear and concise description of what the bug is. What is the expected
+        behaviour? How does it get triggered? A user story format is acceptable.
+      placeholder: |
+        Expected: ...
+        Actual: ...
+        Steps to reproduce:
+        1. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: functional
+    attributes:
+      label: Functional requirement
+      description: >
+        Identify the defective resources (objects, functions); describe their defects
+        and ways to fix this.
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain your problem.
+    validations:
+      required: false
+
+  - type: textarea
+    id: timelines
+    attributes:
+      label: Timelines, deployment checklist
+      description: >
+        When did this defect start, and how much data has it impacted? Can the fix be
+        deployed during working hours? Are there impacts to existing apps/data that we
+        maintain? Do you need to break deployment to stages? Are there any regression
+        considerations? Are there existing objects that may need to be changed?
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: >
+        How are you testing this fix? Does it do anything more than fix the original
+        problem?
+      placeholder: |
+        - [ ] Original defect no longer reproduces
+        - [ ] No unintended changes / regressions introduced
+    validations:
+      required: true
