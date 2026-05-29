@@ -1,0 +1,95 @@
+name: Feature Request
+description: Propose a new feature
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill this out completely. Required fields are marked — you can't submit without them.
+        Keep the **MVP scope** honest: the smallest thing that delivers value. Anything bigger goes in *Out of scope*.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: >
+        Outline the issue this feature would resolve. User story format is acceptable.
+        Highlight business requirements, stakeholders, and other material pertinent for
+        this feature to be successful.
+      placeholder: As a <user>, I want <capability> so that <outcome>...
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: MVP scope / Out of scope
+      description: >
+        What is the MINIMAL version of this that delivers value? List what is explicitly
+        NOT part of this ticket (out of scope / later). This is the contract for "done" —
+        don't build past it.
+      placeholder: |
+        In scope (MVP):
+        - ...
+        Out of scope (later):
+        - ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: functional
+    attributes:
+      label: Functional requirement
+      description: >
+        What is the impact to the user using our tools? What is their change when this
+        feature is implemented?
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical
+    attributes:
+      label: Technical outline/approach
+      description: >
+        What does this feature require from our end? Identify impacted components — data
+        models, API endpoints/controllers, services, UI, infrastructure (new or existing).
+    validations:
+      required: true
+
+  - type: textarea
+    id: wbs
+    attributes:
+      label: Tracked WBS, estimated LOE
+      description: >
+        How would you implement this? Break it down into general steps that can be done
+        and tracked separately, with a rough level of effort for each.
+      placeholder: |
+        - [ ] Step 1 (~Xh)
+        - [ ] Step 2 (~Xh)
+    validations:
+      required: true
+
+  - type: textarea
+    id: timelines
+    attributes:
+      label: Timelines, deployment checklist
+      description: >
+        Are there special constraints to this feature? Can it be released seamlessly?
+        Have you considered time fields for deployment? Are there existing objects that
+        may need to be changed?
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: >
+        How are you testing this feature? How do you define it complete? How do you make
+        sure it doesn't change any more data than it needs to?
+      placeholder: |
+        - [ ] ...
+        - [ ] Verified no unintended data changes
+    validations:
+      required: true
